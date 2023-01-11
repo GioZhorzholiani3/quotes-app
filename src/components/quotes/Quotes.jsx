@@ -29,6 +29,7 @@
 // export default Quotes;
 
 import React, { useState, useEffect } from "react";
+import "./Quotes.module.css";
 
 const Quotes = () => {
   const [quotes, setQuotes] = useState([]);
@@ -54,11 +55,11 @@ const Quotes = () => {
   };
 
   return (
-    <div>
-      <h1>Quotes</h1>
+    <div className="container">
+      <h1>Random Quotes</h1>
       <button onClick={handleRandomQuote}>Generate Random Quote</button>
       {randomQuote && (
-        <div>
+        <div className="quote-container">
           <p>{randomQuote.text}</p>
           <p>- {randomQuote.author}</p>
         </div>
